@@ -1,6 +1,6 @@
 name: Send NYTimes News to Kindle
 
-#on:
+on:
   schedule:
     - cron: '0 21 * * *'
   workflow_dispatch:
@@ -37,7 +37,7 @@ jobs:
           msg = MIMEMultipart()
           msg["From"] = os.environ["FROM"]
           msg["To"] = os.environ["TO"]
-          msg["Subject"] = f"纽约时报中文网 {datetime.now().strftime("%Y-%m-%d")}"
+          msg["Subject"] = f"纽约时报中文网 {datetime.now().strftime('%Y-%m-%d')}"
 
           with open("nytimes_news.epub", "rb") as f:
               part = MIMEBase("application", "epub+zip")
