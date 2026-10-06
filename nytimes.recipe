@@ -267,4 +267,4 @@ class NytimesRecipe(BasicNewsRecipe):
 on:
   schedule:
     - cron: '0 8 * * *'
-  workflow_dispatch:   # 加这一行
+  workflow_dispatch:  
