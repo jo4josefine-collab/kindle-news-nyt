@@ -264,3 +264,7 @@ class NytimesRecipe(BasicNewsRecipe):
         except Exception as e:
             self.log.error(f'封面生成失败: {e}')
             return None
+on:
+  schedule:
+    - cron: '0 8 * * *'
+  workflow_dispatch:   # 加这一行
