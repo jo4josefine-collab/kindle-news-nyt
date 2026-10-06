@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+8#!/usr/bin/env python
 # vim:fileencoding=utf-8
 from __future__ import unicode_literals, division, absolute_import, print_function
 import re
@@ -264,7 +264,3 @@ class NytimesRecipe(BasicNewsRecipe):
         except Exception as e:
             self.log.error(f'封面生成失败: {e}')
             return None
-on:
-  schedule:
-    - cron: '0 8 * * *'
-  workflow_dispatch:  
